@@ -1,0 +1,1177 @@
+<!-- index.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio Website</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" />
+    <link rel="stylesheet" href="C:\Users\91789\OneDrive\Desktop\bashhhhhhh\style.css">
+    <style>
+        /* Hero Section styles */
+        /* Global Styles */
+        
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f9f9f9;
+            padding: 20px;
+            margin: 0;
+        }
+        
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            font-family: Arial, sans-serif;
+            margin-bottom: 0.5em;
+        }
+        
+        h1 {
+            font-size: 36px;
+        }
+        
+        h2 {
+            font-size: 28px;
+        }
+        
+        h3 {
+            font-size: 22px;
+        }
+        
+        p {
+            margin-bottom: 1em;
+        }
+        
+        ul,
+        ol {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        
+        a {
+            text-decoration: none;
+            color: #337ab7;
+        }
+        
+        a:hover {
+            color: #23527c;
+        }
+        /* Hero Section Styles */
+        
+        .hero {
+            background-image: linear-gradient(to bottom, #3498db, #2980b9);
+            background-size: 100% 300px;
+            background-position: 0% 100%;
+            height: 100vh;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #fff;
+            text-align: center;
+        }
+        
+        .hero h1 {
+            font-size: 48px;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+        
+        .hero p {
+            font-size: 24px;
+            margin-bottom: 40px;
+        }
+        
+        .hero button {
+            background-color: #fff;
+            color: #3498db;
+            border: none;
+            padding: 10px 20px;
+            font-size: 18px;
+            cursor: pointer;
+        }
+        
+        .hero button:hover {
+            background-color: #ccc;
+        }
+        /* Resume Section Styles */
+        
+        .resume-container {
+            text-align: center;
+        }
+        
+        .resume-container h2 {
+            font-weight: bold;
+            font-size: 24px;
+            margin-top: 0;
+            color: #333;
+        }
+        
+        .resume-container p {
+            font-size: 16px;
+            margin-bottom: 20px;
+            color: #666;
+        }
+        
+        .resume-btn {
+            background-color: #333;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        
+        .resume-btn:hover {
+            background-color: #555;
+        }
+        
+        .resume-btn i {
+            margin-right: 10px;
+        }
+        /* About Section Styles */
+        
+        .about-container {
+            width: 100%;
+            margin: 0 auto;
+            padding: 20px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .about-content {
+            flex: 1;
+            padding: 20px;
+        }
+        
+        .about-content h2 {
+            font-weight: bold;
+            font-size: 24px;
+            margin-top: 0;
+            color: #333;
+        }
+        
+        .about-content p {
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+        /* Projects Section Styles */
+        
+        .projects-container {
+            width: 100%;
+            padding: 20px;
+            background-color: #f7f7f7;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        .projects-container h2 {
+            font-weight: bold;
+            font-size: 24px;
+            margin-top: 0;
+            color: #333;
+            text-align: center;
+        }
+        
+        .project-card {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 20px;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        .project-card img {
+            width: 100px;
+            height: 100px;
+            margin-right: 10px;
+            border-radius: 10px;
+        }
+        
+        .project-content {
+            flex: 1;
+            padding: 10px;
+        }
+        
+        .project-content h3 {
+            font-weight: bold;
+            font-size: 16px;
+            margin-top: 0;
+            color: #333;
+        }
+        
+        .project-content p {
+            font-size: 14px;
+            margin-bottom: 10px;
+            color: #666;
+        }
+        
+        .project-card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+        }
+        
+        .project-card:hover img {
+            transform: scale(1.1);
+        }
+        /* Services Section Styles */
+        
+        .services-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .service-card {
+            width: calc(33.33% - 20px);
+            margin: 10px;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        .service-card i {
+            font-size: 24px;
+            margin-bottom: 10px;
+            color: #666;
+        }
+        
+        .service-card h3 {
+            font-weight: bold;
+            font-size: 18px;
+            margin-top: 0;
+            color: #333;
+        }
+        
+        .service-card p {
+            font-size: 14px;
+            margin-bottom: 20px;
+            color: #666;
+        }
+        
+        .learn-more-btn {
+            background-color: #333;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        
+        .learn-more-btn:hover {
+            background-color: #555;
+        }
+        /* Contact Section Styles */
+        
+        .contact-section {
+            position: relative;
+            background-image: linear-gradient(to bottom, rgba(52, 152, 219, 0.8), rgba(41, 128, 185, 0.8)), url('contact-image.jpg');
+            background-size: cover;
+            background-position: center;
+            padding: 50px;
+            text-align: center;
+            color: #fff;
+        }
+        
+        .contact-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('contact-image.jpg');
+            background-size: cover;
+            background-position: center;
+            opacity: 0.5;
+        }
+        
+        .contact-content {
+            z-index: 1;
+        }
+        
+        .contact-content h2 {
+            font-size: 36px;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+        
+        .contact-content p {
+            font-size: 18px;
+            margin-bottom: 30px;
+        }
+        
+        .social-links ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        
+        .social-links li {
+            display: inline-block;
+            margin: 10px;
+        }
+        
+        .social-links a {
+            color: #fff;
+            text-decoration: none;
+        }
+        
+        .social-links a:hover {
+            color: #ccc;
+        }
+        /* Animations */
+        
+        .hero {
+            animation: heroAnimation 2s ease-in-out;
+        }
+        
+        @keyframes heroAnimation {
+            0% {
+                transform: translateY(-100%);
+            }
+            100% {
+                transform: translateY(0);
+            }
+        }
+        
+        .project-card {
+            animation: projectCardAnimation 1s ease-in-out;
+        }
+        
+        @keyframes projectCardAnimation {
+            0% {
+                transform: scale(0.5);
+            }
+            100% {
+                transform: scale(1);
+            }
+        }
+        
+        .service-card {
+            animation: serviceCardAnimation 1s ease-in-out;
+        }
+        
+        @keyframes serviceCardAnimation {
+            0% {
+                transform: scale(0.5);
+            }
+            100% {
+                transform: scale(1);
+            }
+        }
+        
+        .contact-section {
+            animation: contactSectionAnimation 2s ease-in-out;
+        }
+        
+        @keyframes contactSectionAnimation {
+            0% {
+                transform: translateY(100%);
+            }
+            100% {
+                transform: translateY(0);
+            }
+        }
+        
+        .hero {
+            background-image: linear-gradient(to bottom, #3498db, #2980b9);
+            background-size: 100% 300px;
+            background-position: 0% 100%;
+            height: 100vh;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #fff;
+            text-align: center;
+        }
+        
+        .hero h1 {
+            font-size: 48px;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+        
+        .hero p {
+            font-size: 24px;
+            margin-bottom: 40px;
+        }
+        
+        .hero button {
+            background-color: #fff;
+            color: #3498db;
+            border: none;
+            padding: 10px 20px;
+            font-size: 18px;
+            cursor: pointer;
+        }
+        
+        .hero button:hover {
+            background-color: #ccc;
+        }
+        /* Resume Section styles */
+        
+        #resume-section {
+            background-color: #f7f7f7;
+            padding: 20px;
+            text-align: center;
+        }
+        
+        #resume-section {
+            padding: 20px;
+            background-color: #f7f7f7;
+            border: 1px solid #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        .resume-container {
+            text-align: center;
+        }
+        
+        .resume-container h2 {
+            font-weight: bold;
+            font-size: 24px;
+            margin-top: 0;
+            color: #333;
+        }
+        
+        .resume-container p {
+            font-size: 16px;
+            margin-bottom: 20px;
+            color: #666;
+        }
+        
+        .resume-btn {
+            background-color: #333;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        
+        .resume-btn:hover {
+            background-color: #555;
+        }
+        
+        .resume-btn i {
+            margin-right: 10px;
+        }
+        
+        .resume-container p {
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+        
+        .resume-btn {
+            background-color: #3498db;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            font-size: 18px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        
+        .resume-btn:hover {
+            background-color: #2980b9;
+        }
+        
+        .about-container {
+            width: 100%;
+            margin: 0 auto;
+            padding: 20px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .about-content {
+            flex: 1;
+            padding: 20px;
+        }
+        
+        .about-content h2 {
+            font-weight: bold;
+            font-size: 24px;
+            margin-top: 0;
+            color: #333;
+        }
+        
+        .about-content p {
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+        
+        .projects-container {
+            width: 100%;
+            padding: 20px;
+            background-color: #f7f7f7;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        .projects-container h2 {
+            font-weight: bold;
+            font-size: 24px;
+            margin-top: 0;
+            color: #333;
+            text-align: center;
+        }
+        
+        .project-card {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 20px;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        .project-card img {
+            width: 100px;
+            height: 100px;
+            margin-right: 10px;
+            border-radius: 10px;
+        }
+        
+        .project-content {
+            flex: 1;
+            padding: 10px;
+        }
+        
+        .project-content h3 {
+            font-weight: bold;
+            font-size: 16px;
+            margin-top: 0;
+            color: #333;
+        }
+        
+        .project-content p {
+            font-size: 14px;
+            margin-bottom: 10px;
+            color: #666;
+        }
+        
+        .project-card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+        }
+        
+        .project-card:hover img {
+            transform: scale(1.1);
+        }
+        
+        #services {
+            padding: 20px;
+            background-color: #f7f7f7;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        #services h2 {
+            font-weight: bold;
+            font-size: 24px;
+            margin-top: 0;
+            color: #333;
+            text-align: center;
+        }
+        
+        #services p {
+            font-size: 16px;
+            margin-bottom: 20px;
+            color: #666;
+            text-align: center;
+        }
+        
+        .services-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .service-card {
+            width: calc(33.33% - 20px);
+            margin: 10px;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        .service-card i {
+            font-size: 24px;
+            margin-bottom: 10px;
+            color: #666;
+        }
+        
+        .service-card h3 {
+            font-weight: bold;
+            font-size: 18px;
+            margin-top: 0;
+            color: #333;
+        }
+        
+        .service-card p {
+            font-size: 14px;
+            margin-bottom: 20px;
+            color: #666;
+        }
+        
+        .learn-more-btn {
+            background-color: #333;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        
+        .learn-more-btn:hover {
+            background-color: #555;
+        }
+        
+        @media (max-width: 768px) {
+            .service-card {
+                width: calc(50% - 20px);
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .service-card {
+                width: 100%;
+            }
+        }
+        
+        .hero {
+            position: relative;
+            height: 100vh;
+            background-image: linear-gradient(to bottom, rgba(52, 152, 219, 0.8), rgba(41, 128, 185, 0.8)), url('hero-image.jpg');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #fff;
+            text-align: center;
+        }
+        
+        .hero-content {
+            z-index: 1;
+            padding: 20px;
+        }
+        
+        .hero-content h1 {
+            font-size: 48px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        
+        .hero-content h2 {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+        
+        .hero-content p {
+            font-size: 18px;
+            margin-bottom: 30px;
+        }
+        
+        .hero-content button {
+            background-color: #333;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            font-size: 18px;
+            cursor: pointer;
+        }
+        
+        .hero-content button:hover {
+            background-color: #555;
+        }
+        
+        .footer {
+            position: relative;
+            background-image: linear-gradient(to bottom, rgba(52, 152, 219, 0.8), rgba(41, 128, 185, 0.8)), url('footer-image.jpg');
+            background-size: cover;
+            background-position: center;
+            padding: 20px;
+            text-align: center;
+            color: #fff;
+        }
+        
+        .footer-content {
+            z-index: 1;
+        }
+        
+        .footer-content p {
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+        /* Add a semi-transparent overlay on top of the background image */
+        
+        .footer::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+        
+        .contact-section {
+            position: relative;
+            background-image: linear-gradient(to bottom, rgba(52, 152, 219, 0.8), rgba(41, 128, 185, 0.8)), url('contact-image.jpg');
+            background-size: cover;
+            background-position: center;
+            padding: 50px;
+            text-align: center;
+            color: #fff;
+        }
+        
+        .contact-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('contact-image.jpg');
+            background-size: cover;
+            background-position: center;
+            opacity: 0.5;
+        }
+        
+        .contact-content {
+            z-index: 1;
+        }
+        
+        .contact-content h2 {
+            font-size: 36px;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+        
+        .contact-content p {
+            font-size: 18px;
+            margin-bottom: 30px;
+        }
+        
+        .social-links ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        
+        .social-links li {
+            display: inline-block;
+            margin: 10px;
+        }
+        
+        .social-links a {
+            color: #fff;
+            text-decoration: none;
+        }
+        
+        .social-links a:hover {
+            color: #ccc;
+        }
+        
+        .resume-container {
+            animation: resumeContainerAnimation 1s ease-in-out;
+        }
+        
+        @keyframes resumeContainerAnimation {
+            0% {
+                transform: translateY(-100%);
+                opacity: 0;
+            }
+            100% {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+        
+        .resume-btn {
+            animation: resumeBtnAnimation 1s ease-in-out;
+        }
+        
+        @keyframes resumeBtnAnimation {
+            0% {
+                transform: scale(0.5);
+                opacity: 0;
+            }
+            100% {
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+        
+        .resume-btn:hover {
+            animation: resumeBtnHoverAnimation 0.5s ease-in-out;
+        }
+        
+        @keyframes resumeBtnHoverAnimation {
+            0% {
+                transform: scale(1);
+            }
+            100% {
+                transform: scale(1.1);
+            }
+        }
+        
+        .resume-btn i {
+            animation: resumeBtnIconAnimation 1s ease-in-out;
+        }
+        
+        @keyframes resumeBtnIconAnimation {
+            0% {
+                transform: rotate(0deg);
+            }
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+        
+        .hero-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('pexels-pixabay-33545.jpg');
+            background-size: cover;
+            background-position: center;
+            opacity: 0.5;
+        }
+        
+        .contact-content {
+            height: 80vh;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #fff;
+            opacity: 0.5;
+        }
+        
+        .contact-card {
+            position: relative;
+            background-color: #fff;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            z-index: 1;
+        }
+        
+        .contact-section {
+            position: relative;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .learn-more-btn {
+            background-color: #34C759
+        }
+        
+        .learn-more-btn {
+            background-color: #34C759;
+            color: #FFFFFF;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            /* add transition effect */
+        }
+        
+        .learn-more-btn:hover {
+            background-color: #2E865F;
+            /* change background color on hover */
+        }
+        
+        .learn-more-btn:active {
+            background-color: #1E744F;
+            /* change background color on active */
+        }
+        
+        .learn-more-btn a {
+            color: #FFFFFF;
+            text-decoration: none;
+        }
+        
+        .learn-more-btn a:hover {
+            color: #FFFFFF;
+            /* keep text color white on hover */
+        }
+        
+        .services-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        
+        .service-card {
+            width: calc(33.33% - 20px);
+            /* equalize width */
+            margin: 10px;
+            /* add margin */
+            padding: 20px;
+            /* add padding */
+            background-color: #FFFFFF;
+            /* add background color */
+            border: 1px solid #DDDDDD;
+            /* add border */
+            border-radius: 10px;
+            /* add border radius */
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            /* add box shadow */
+        }
+        
+        .learn-more-btn {
+            background-color: #34C759;
+            color: #FFFFFF;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        
+        .learn-more-btn:hover {
+            background-color: #2E865F;
+        }
+        
+        .learn-more-btn:active {
+            background-color: #1E744F;
+        }
+        
+        .learn-more-btn a {
+            color: #FFFFFF;
+            text-decoration: none;
+        }
+        
+        .learn-more-btn a:hover {
+            color: #FFFFFF;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Header Section -->
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="#services">Services</a></li>
+
+            </ul>
+        </nav>
+    </header>
+    <!-- Hero Section -->
+    <section style="background-image: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url('pexels-pixabay-33545.jpg'); background-size: cover; background-position: center; background-repeat: no-repeat;" class="hero hero-section">
+        <div class="hero-content" style="position: relative; z-index: 1; color: #fff;">
+            <h1> Welcome to the World of Anshika Singh!</h1>
+            <h2> Where Innovation Meets Ambition </h2>
+            <a href="#about"><button>Get Started</button></a>
+        </div>
+    </section>
+    <!-- About Section -->
+    <section style="background-image: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url('pexels-hngstrm-1939485.jpg'); background-size: cover; background-position: center; background-repeat: no-repeat;" id="about">
+        <div class="about-container" style="background-image: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url('pexels-laura-tancredi-7078622.jpg'); background-size: cover; background-position: center; background-repeat: no-repeat;">
+            <img src="C:\Users\91789\OneDrive\Desktop\bashhhhhhh\WhatsApp Image 2024-06-20 at 15.41.55_89d92e24.jpg" alt="Profile Picture">
+            <div class="about-content">
+                <h2>About Me</h2>
+                <p style="font:colo">Hello...!
+                    <br>I'm Anshika Singh, a final-year BTech CS AIML student at GLA University Mathura. Passionate about web development and data analytics, I aspire to blend these skills to innovate and drive data-driven solutions. My ultimate goal
+                    is to excel as both a web developer and data analyst, creating impactful digital experiences and insights.</p>
+            </div>
+        </div>
+    </section>
+    <!-- Resume Section -->
+    <section style="background-image: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url('pexels-laura-tancredi-7078622.jpg'); background-size: cover; background-position: center; background-repeat: no-repeat;" id="resume-section">
+        <div class="resume-container">
+            <h2>My Resume</h2>
+            <p>Click the button below to view my resume.</p>
+            <a href="C:\Users\91789\OneDrive\Desktop\projects\simple portfolio website\resume.html" target="_blank">
+                <button class="resume-btn">
+                <i class="fas fa-file"></i> View Resume
+            </button>
+            </a>
+        </div>
+    </section>
+    <!-- Projects Section -->
+    <section id="projects" style="background-image: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url('pexels-laura-tancredi-7078622.jpg'); background-size: cover; background-position: center; background-repeat: no-repeat;">
+        <div class="projects-container">
+            <h2>My Projects</h2>
+            <ul>
+                <li>
+                    <div class="project-card">
+                        <img src="C:\Users\91789\OneDrive\Desktop\bashhhhhhh\soduku.jpg" alt="Sudoku">
+                        <div class="project-content">
+                            <h3>🔢 Sudoku Solver Project</h3>
+                            <p>🧩 Developed a sophisticated Sudoku game in Java, leveraging DSA principles for seamless and efficient gameplay.</p>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="project-card">
+                        <img src="C:\Users\91789\OneDrive\Desktop\bashhhhhhh\blog.jpg" alt="Blog Website">
+                        <div class="project-content">
+                            <h3>Blogging Website</h3>
+                            <p>"Crafted a sleek and dynamic blog website with HTML, CSS, and JavaScript, blending seamless functionality with captivating design."</p>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="project-card">
+                        <img src="C:\Users\91789\OneDrive\Desktop\bashhhhhhh\portfolio.jpg" alt="Portfolio Website">
+                        <div class="project-content">
+                            <h3>Portfolio Website</h3>
+                            <p>Portfolio Website by Anshika Singh: A sleek, modern showcase of my journey and expertise in tech and data analytics, crafted with precision using CSS, HTML, and JavaScript.</p>
+                        </div>
+                    </div>
+                </li>
+                <section id="project">
+                    <h2>Tableau Visualization</h2>
+                    <div class="video-container">
+                        <video id="tableau-video" loop autoplay muted>
+                            <source src="C:\Users\91789\OneDrive\Desktop\bashhhhhhh\Untitled video - Made with Clipchamp.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                        <button id="fast-forward-btn">Fast Forward</button>
+                    </div>
+                    <p>"Crafted an interactive Tableau dashboard for dynamic and insightful business analysis."</p>
+                </section>
+
+
+
+                <!-- Add more projects here -->
+            </ul>
+        </div>
+
+    </section>
+    <!-- Services Section -->
+    <section id="services" style="background-image: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url('pexels-laura-tancredi-7078622.jpg'); background-size: cover; background-position: center; background-repeat: no-repeat;">
+        <h1>My Services</h1>
+        <p>I offer a range of services to help you achieve your goals.</p>
+        <div class="services-container">
+            <div class="service-card">
+                <i class="fas fa-code"></i>
+                <h3>Web Development</h3>
+                <p>Build fast, scalable, and secure websites with my expertise in HTML, CSS, JavaScript, and frameworks like React and Angular.</p>
+                <button class="learn-more-btn"><a href="contact.html">Learn More</a></button>
+            </div>
+            <div class="service-card">
+                <i class="fas fa-chart-bar"></i>
+                <h3>Data Analysis</h3>
+                <p>Unlock insights from your data with my skills in data visualization, machine learning, and statistical analysis using tools like Tableau, Power BI, and Python.</p>
+                <button class="learn-more-btn"><a href="contact.html">Learn More</a></button>
+            </div>
+            <div class="service-card">
+                <i class="fas fa-mobile-alt"></i>
+                <h3>Mobile App Development</h3>
+                <p>Develop high-quality, user-friendly mobile apps for Android and iOS using frameworks like React Native and Flutter.</p>
+                <button class="learn-more-btn"><a href="contact.html">Learn More</a></button>
+            </div>
+            <div class="service-card">
+                <i class="fas fa-robot"></i>
+                <h3>AI Chatbot Development</h3>
+                <p>Design and develop intelligent chatbots like Jarvis that can understand and respond to user queries using natural language processing (NLP) and machine learning algorithms.</p>
+                <button class="learn-more-btn"><a href="contact.html">Learn More</a></button>
+            </div>
+            <div class="service-card">
+                <i class="fas fa-lock"></i>
+                <h3>Security Model</h3>
+                <p>Develops using advanced encryption techniques, secure authentication protocols, and threat detection systems.</p>
+                <button class="learn-more-btn"><a href="contact.html">Learn More</a></button>
+            </div>
+            <div class="service-card">
+                <i class="fas fa-language"></i>
+                <h3> Large Language Models</h3>
+                <p>Able to develop Large Language Models.</p>
+                <button class="learn-more-btn"><a href="contact.html">Learn More</a></button>
+            </div>
+            <!-- Add more service cards here -->
+        </div>
+    </section>
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section" style="background-image: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url('pexels-laura-tancredi-7078622.jpg'); background-size: cover; background-position: center; background-repeat: no-repeat;">
+        <div class="overlay"></div>
+        <div class="contact-card" style="width: 80%; height: 80vh; padding: 40px;">
+            <h2>Follow Me On</h2>
+            <p>Feel free to contact me through the following channels:</p>
+            <div class="social-links">
+                <ul>
+                    <li><a href="mailto:anshikasinghrajput38@gmail.com" target="_blank"><i class="fas fa-envelope" style="font-size: 36px; margin: 10px;"></i></a></li>
+                    <li><a href="https://github.com/anshi0003" target="_blank"><i class="fab fa-github" style="font-size: 36px; margin: 10px;"></i></a></li>
+                    <li><a href="https://leetcode.com/u/anshikasinghrajput38/" target="_blank"><i class="fas fa-code" style="font-size: 36px; margin: 10px;"></i></a></li>
+                    <li><a href="https://www.instagram.com/anshi.ka027/" target="_blank"><i class="fab fa-instagram" style="font-size: 36px; margin: 10px;"></i></a></li>
+                    <li><a href="https://www.linkedin.com/in/anshika-singh-a6b836233/" target="_blank"><i class="fab fa-linkedin-in" style="font-size: 36px; margin: 10px;"></i></a></li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <!-- Footer Section -->
+
+
+    <script src="C:\Users\91789\OneDrive\Desktop\bashhhhhhh\script.js"></script>
+</body>
+<footer style="background-image: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url('pexels-pixabay-33545.jpg'); class=" footer ">
+    <div class="footer-content ">
+        <p>&copy; 2023 Anshika Singh</p>
+    </div>
+</footer>
+
+</html>

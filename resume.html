@@ -1,0 +1,374 @@
+<!-- HTML Code -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <script src="C:\Users\91789\OneDrive\Desktop\projects\simple portfolio website\script.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anshika Singh - Resume</title>
+    <link rel="stylesheet" href="C:\Users\91789\OneDrive\Desktop\projects\simple portfolio website\style.css">
+    <style>
+        /* Dark background color: RGB(4, 2, 4) = #040204 */
+        /* Bright background color: RGB(132, 193, 138) = #84C18A */
+        /* Normal text color: RGB(148, 180, 159) = #94B49F */
+        /* H1 > H6 color: RGB(206, 206, 206) = #CECECE */
+        /* Dark grey colour code: RGB(32, 33, 36) = #212120 */
+        /* Bright grey colour code: RGB(53, 54, 58) = #353A3A */
+        /* Link dark color: RGB(206, 206, 206) = #CECECE */
+        /* Link bright color: RGB(255, 255, 255) = #FFFFFF */
+        
+         :root {
+            --dark-background: #386bc5;
+            --bright-background: #fdfffd;
+            --normal-text: #7ea1e2;
+            --heading-color: #0e0f0f;
+            --dark-grey: #212120;
+            --bright-grey: #11f1f1;
+            --link-dark: #2649aa;
+            --link-bright: #FFFFFF;
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 20px;
+            background-color: var(--bright-background);
+            border: 1px solid var(--dark-grey);
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        .nav-bar {
+            background-color: var(--dark-background);
+            padding: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .nav-bar-content {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        
+        .back-btn {
+            background-color: var(--dark-background);
+            color: var(--normal-text);
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            display: inline-block;
+        }
+        
+        .back-btn:hover {
+            background-color: var(--bright-background);
+            color: var(--heading-color);
+        }
+        
+        .back-btn i {
+            margin-right: 5px;
+        }
+        
+        .header {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+            background-color: var(--dark-background);
+            color: var(--normal-text);
+        }
+        
+        .back-btn {
+            display: inline-block;
+            background-color: var(--dark-background);
+            color: var(--normal-text);
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            float: right;
+        }
+        
+        .profile-image {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            margin: 20px;
+        }
+        
+        .profile-image img {
+            width: 100%;
+            height: 100%;
+        }
+        
+        .header h1 {
+            font-size: 24px;
+            margin-bottom: 10px;
+            color: var(--heading-color);
+        }
+        
+        .header p {
+            font-size: 16px;
+            margin-bottom: 10px;
+        }
+        
+        .header a {
+            text-decoration: none;
+            color: var(--link-bright);
+        }
+        
+        .header a:hover {
+            color: var(--link-dark);
+        }
+        
+        .section {
+            margin-bottom: 20px;
+        }
+        
+        .section h2 {
+            font-size: 18px;
+            margin-bottom: 10px;
+            color: var(--heading-color);
+        }
+        
+        .section ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        
+        .section li {
+            margin-bottom: 10px;
+        }
+        
+        .section p {
+            font-size: 16px;
+            margin-bottom: 10px;
+        }
+        
+        .highlight {
+            font-weight: bold;
+            color: var(--heading-color);
+        }
+        
+        .subheading {
+            font-size: 16px;
+            margin-bottom: 10px;
+            color: var(--heading-color);
+        }
+        
+        .subheading ul {
+            list-style: disc;
+            padding: 0 20px;
+            margin: 0;
+        }
+        
+        .subheading li {
+            margin-bottom: 10px;
+        }
+        
+        .dotted-list {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+        
+        .dotted-list li {
+            position: relative;
+            padding-left: 20px;
+        }
+        
+        .dotted-list li:before {
+            content: "\2022";
+            position: absolute;
+            left: 0;
+            top: 0;
+            font-size: 16px;
+            color: #333;
+        }
+        
+        .dotted-list {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+        
+        .dotted-list li {
+            position: relative;
+            padding-left: 20px;
+        }
+        
+        .dotted-list li:before {
+            content: "\2022";
+            position: absolute;
+            left: 0;
+            top: 0;
+            font-size: 16px;
+            color: #333;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="nav-bar">
+        <div class="nav-bar-content">
+            <a href="C:\Users\91789\OneDrive\Desktop\projects\simple portfolio website\portfolio.html" class="back-btn">
+                <i style="color:white;" class="fas fa-arrow-left"></i> Back to Portfolio
+            </a>
+        </div>
+    </div>
+    <div class="container">
+        <div class="header">
+
+            <div class="profile-image">
+                <img src="WhatsApp Image 2024-06-20 at 15.41.55_89d92e24.jpg" alt="Anshika Singh">
+            </div>
+            <h1>Anshika Singh</h1>
+            <p><span class="highlight">C.H.C Hospital Faridpur, Bareilly, 243503</span></p>
+            <p><a href="mailto:anshika.singh_cs.aiml21@gla.ac.in">anshika.singh_cs.aiml21@gla.ac.in</a> | <a href="tel:+91 7895077636">+91 7895077636</a></p>
+            <p><a href="https://www.linkedin.com/in/anshika-singh-a6b836233" target="_blank">LinkedIn</a> | <a href="https://leetcode.com/u/anshikasinghrajput38/" target="_blank">LeetCode</a> | <a href="https://github.com/anshi0003" target="_blank">GitHub</a></p>
+        </div>
+        <div class="section education">
+            <h2>EDUCATION</h2>
+            <ul class="dotted-list">
+                <li>
+                    <p><span class="highlight">Pursuing Bachelor of Technology in Computer Science with specialization in Artificial Intelligence and Machine Learning</span>, GLA University, Mathura</p>
+                    <p><b>CGPA:</b> 7.2%, <b>Expected Graduation: June 2025</b></p>
+                </li>
+                <li>
+                    <p><b>Intermediate</b>, Madhavrao Scindia Public School, Bareilly</p>
+                    <p><b>Percentage:</b> 75.5%, Passed: May 2021</p>
+                </li>
+                <li>
+                    <p><b>High School</b>, Madhavrao Scindia Public School, Bareilly</p>
+                    <p><b>Percentage:</b> 78.6%, Passed: May 2019</p>
+                </li>
+            </ul>
+        </div>
+
+        <div class="section internship">
+            <h2><b>INTERNSHIP/TRAINING EXPERIENCE</b></h2>
+            <ul class="dotted-list">
+                <li>
+                    <p>Job Oriented Value Added Course, GLA University, Mathura</p>
+                    <p><b>Duration:</b> June 2023 – July 2023</p>
+                    <p><b>Trainee</b></p>
+                    <ul class="dotted-list">
+                        <li>Learnt basics of Data Structure and Algorithm with Java</li>
+                        <li>Completed extensive training and developed an advanced Sudoku solver project utilizing Data Structures and Algorithms.</li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <section id="skills">
+            <h2>Skills</h2>
+            <div class="skills-container">
+                <h3>Technical</h3>
+                <ul class="dotted-list">
+                    <li>A.I. & M.L</li>
+                    <li>Java, Python, R, DSA</li>
+                    <li>N.L.P, Data Mining</li>
+                    <li>Java Script, HTML5, CSS3</li>
+                </ul>
+                <h3>Professional</h3>
+                <ul class="dotted-list">
+                    <li>Effective Analytical Skills</li>
+                    <li>Ability to identify and solve problems</li>
+                    <li>Good interpersonal and communication skill</li>
+                    <li>Self and Team Management Skills</li>
+                </ul>
+                <h3>Tools & Software</h3>
+                <ul class="dotted-list">
+                    <li>Microsoft Power BI</li>
+                    <li>Tableau</li>
+                    <li>Canvas</li>
+                    <li>Google Colab, VS Studio</li>
+                </ul>
+            </div>
+        </section>
+        <div class="section projects">
+            <h2>PROJECTS</h2>
+            <ul class="dotted-list">
+                <li>
+                    <p><span class="highlight">AI Driven Language Revitalization Model</span></p>
+                    <p><b>Duration:</b> Feb 2023 – Apr 2023</p>
+                    <p>Spearheaded language-driven revitalization initiatives, leveraging advanced linguistics technologies for preserving and promoting endangered languages.</p>
+                    <h3 class="subheading"><b>Technologies Used:</b></h3>
+                    <ul class="dotted-list">
+                        <li>Python</li>
+                        <li>NLP</li>
+                        <li>Machine Learning</li>
+                    </ul>
+                </li>
+                <li>
+                    <p><span class="highlight">Banking Securities, Fraud and Anomalies Detection system</span></p>
+                    <p><b>Duration:</b> Sept. 2023 – Nov. 2023</p>
+                    <p>Spearheaded development of a cutting-edge Banking Security System, utilizing advanced Machine Learning Algorithms for real-time fraud detection.</p>
+                    <h3 class="subheading">Technologies Used:</h3>
+                    <ul class="dotted-list">
+                        <li>Java</li>
+                        <li>Machine Learning</li>
+                        <li>Data Mining</li>
+                    </ul>
+                </li>
+                <li>
+                    <p>
+                        <span class="highlight">Bloggy Website</span></p>
+                    <p>Duration: Jan 2023 – Feb 2023</p>
+                    <p>Developed a fully functional blog website using HTML, CSS, and JavaScript.</p>
+                    <h3 class="subheading">Technologies Used:</h3>
+                    <ul class="dotted-list">
+                        <li>HTML</li>
+                        <li>CSS</li>
+                        <li>JavaScript</li>
+                    </ul>
+                </li>
+                <li>
+                    <p><span class="highlight">Portfolio Website</span></p>
+                    <p>Duration: Mar 2023 – Apr 2023</p>
+                    <p>Designed and developed a professional portfolio website showcasing my skills and experience.</p>
+                    <h3 class="subheading">Technologies Used:</h3>
+                    <ul class="dotted-list">
+                        <li>HTML</li>
+                        <li>CSS</li>
+                        <li>JavaScript</li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+
+        <div class="section activities">
+            <h2>EXTRA/CO-CURRICULAR ACTIVITIES</h2>
+            <ul class="dotted-list">
+                <li>Academic Head at Udaaan Aasma Tak NGO.</li>
+                <li>Coordinated SRIJAN (Cultural Fest, GLA, September, 2022).</li>
+                <li>Coordinating UDAAAN AASMA TAK NGO (National Level NGO), have three year working experience in this organization, organized and coordinated many events and workshops.</li>
+                <li>Coordinated IBM ICE DAY (Tech Fest, GLA, November,2022).</li>
+                <li>Member at E-cell.</li>
+            </ul>
+        </div>
+
+        <div class="section certification">
+            <h2>CERTIFICATION</h2>
+            <ul class="dotted-list">
+                <li>Attended IBM Workshop on Neural Networking conducted by Technical Trainer Mr. Shivam Paisal.</li>
+                <li>Volunteer of the Month at Udaaan Aasma Tak NGO.</li>
+                <li>Certificate of Completion of Design and Analysis of Algorithm by NPTEL Swayam.</li>
+                <li>Certificate of Completion of Patent Law for Engineers and Scientist by NPTEL Swayam.</li>
+            </ul>
+        </div>
+
+        <div class="section declaration">
+            <h2>DECLARATION</h2>
+            <p>I hereby declare that all the above mentioned information is true and correct to the best of my knowledge.</p>
+        </div>
+</body>
+<footer class=" footer " style="background-color: #386bc5;">
+    <div class="footer-content ">
+        <p>&copy; 2023 Anshika Singh</p>
+    </div>
+</footer>
+
+</html>
